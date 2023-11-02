@@ -1,0 +1,17 @@
+/* src/SurveyForm.css */
+.SurveyForm {
+margin: 20px;
+padding: 20px;
+border: 1px solid #ccc;
+background-color: #f4f4f4;
+}
+.SurveyQuestion {
+margin-bottom: 20px;
+}
+.SurveyQuestion h3 {
+margin: 0;
+}
+.SurveyQuestion input {
+width: 100%;
+padding: 10px;
+}
