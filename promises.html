@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quote Generator</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+text-align: center;
+margin: 0;
+padding: 0;
+}
+h1 {
+margin-top: 20px;
+}
+#quoteContainer {
+margin: 20px;
+}
+button {
+padding: 10px 20px;
+font-size: 16px;
+margin: 10px;
+cursor: pointer;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+}
+button:hover {
+background-color: #0056b3;
+}
+#output {
+font-size: 18px;
+margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<h1>Quote Generator</h1>
+<div id="quoteContainer">
+<button id="getQuoteButton">Get Quote</button>
+</div>
+<p id="output"></p>
+<script>
+// Get references to HTML elements
+const getQuoteButton = document.getElementById('getQuoteButton');
+const output = document.getElementById('output');
+// Handle Get Quote Button Click
+getQuoteButton.addEventListener('click', () => {
+output.textContent = 'Fetching a random quote...';
+// Fetch a random quote from Quotable API
+fetch('https://api.quotable.io/random')
+.then((response) => {
+if (!response.ok) {
+throw new Error('Failed to fetch a quote');
+}
+return response.json();
+})
+.then((data) => {
+const quote = `"${data.content}" — ${data.author}`;
+output.textContent = quote;
+})
+.catch((error) => {
+output.textContent = 'Error: ' + error.message;
+});
+});
+</script>
+</body>
+</html>
+
+
+<!-- 
+API Usage
+The API used in the above code is the Quotable API (https://api.quotable.io/random).
+It is used in the following code line to fetch a random quote:
+fetch('https://api.quotable.io/random')
+In the above "Quote Generator" code, promises with resolve and reject are used in the .then() 
+and .catch() blocks respectively to handle the asynchronous nature of the Fetch API.
+• Resolve Promise (then() Block):
+After the fetch function successfully retrieves data from the API, the promise resolves, and the 
+.then() block is executed.
+In the .then() block, the response object is passed as an argument, and the code checks if the 
+response is "ok" (i.e., the HTTP status is 200, indicating a successful response).
+If the response is "ok," the promise resolves and proceeds to the next .then() block.
+.then((response) => {
+if (!response.ok) {
+throw new Error('Failed to fetch a quote');
+}
+return response.json();
+})
+• Reject Promise (catch() Block):
+If there's an issue with the API request (e.g., network error, incorrect URL, or the response is 
+not "ok"), the promise is rejected, and the .catch() block is executed.
+In the .catch() block, the error object is passed as an argument, and it contains information 
+about why the promise was rejected.
+.catch((error) => {
+output.textContent = 'Error: ' + error.message;
+}); -->
