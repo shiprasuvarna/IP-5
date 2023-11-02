@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Roller Skating</title>
+</head>
+<body style="background-color: black;">
+<h1 style="text-align: center; color: #39FF14;">Roller Skating</h1>
+<p style="color: aqua; font-size: 18px;">
+Roller skating is a recreational and sport activity where individuals use 
+roller skates, typically with four wheels arranged in a side-by-side 
+configuration, to move on various surfaces. It can be enjoyed indoors at 
+roller rinks or outdoors on smooth paths like streets, sidewalks, and bike 
+paths. Roller skating provides a fun and social experience for people of all 
+ages, making it a popular activity for families and friends.
+In roller rinks, skaters can dance, participate in games, and socialize with 
+others. Roller derby, a competitive team sport, is also popular within the 
+roller skating community. Skaters wear protective gear like helmets, knee 
+pads, and elbow pads to ensure safety while performing tricks and maneuvers.
+Roller skating offers numerous health benefits, including improved balance, 
+coordination, and cardiovascular fitness. It is a great way to stay active and 
+enjoy the outdoors or participate in organized roller skating events and 
+competitions.
+Roller skating has a rich history, with roots dating back to the 18th century. 
+It has evolved over the years and continues to be a beloved pastime for people 
+worldwide.
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Assignment</title>
+<link rel="stylesheet" 
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.0.0-beta3/css/all.min.css">
+<style>
+.slideshow-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: opacity 1s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class="container mt-5">
+<div class="row justify-content-center">
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-9">
+<div class="img-card">
+<img id="skating-slideshow" class="img-fluid rounded slideshowimage" alt="Image Slideshow">
+</div>
+</div>
+</div>
+</div>
+<script>
+function* imageSlideshowAnimation(images) {
+while (true) {
+for (const imageUrl of images) {
+yield imageUrl;
+}
+}
+}
+const slideshowImages = [
+'https://www.goodnet.org/photos/620x0/36977_hd.jpg',
+'https://www.flaneurz.com/media/wysiwyg/FLANEURZ-BLOG-BIENFAITS-DUROLLER-2.jpg',
+'https://leadership.ng/wp-content/uploads/2022/07/Roller-Skating.jpg',
+'https://oaklandside.org/wp-content/uploads/2021/03/online03_02_21_l_merritt_roller_skate_ring008.png'
+];
+const animationIterator = imageSlideshowAnimation(slideshowImages);
+const slideshowImageElement = document.getElementById('skatingslideshow');
+function updateSlideshowImage() {
+const imageUrl = animationIterator.next().value;
+slideshowImageElement.style.opacity = '0';
+slideshowImageElement.src = imageUrl;
+setTimeout(() => {
+slideshowImageElement.style.opacity = '1';
+}, 1000); 
+}
+setInterval(updateSlideshowImage, 3000);
+</script>
+</body>
+</html>
+</p>
+</body>
+</html>
