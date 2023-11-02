@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Form</title>
+</head>
+<body>
+<h1>Welcome to the Interactive Form</h1>
+<form id="user-form">
+<label for="name">Name:</label>
+<input type="text" id="name" required><br><br>
+<label for="email">Email:</label>
+<input type="email" id="email" required><br><br>
+<input type="submit" value="Submit">
+</form>
+<div id="greeting" style="display: none;"></div>
+<script src="DOMjs.js" defer></script>
+</body>
+</html>
+
+
+<!-- 
+DOM manipulation is used extensively to interact with and modify elements in 
+the HTML document.
+• Selecting DOM Elements:
+DOM elements are selected using methods like document.getElementById, which retrieves 
+elements by their id attribute. In the code, we use it to get references to the form inputs and the 
+greeting <div>:
+const form = document.getElementById('user-form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const greetingDiv = document.getElementById('greeting');
+• Adding Event Listeners:
+DOM elements are given event listeners to respond to user interactions. In this code, we use 
+the addEventListener method to listen for the form's "submit" event:
+form.addEventListener('submit', function (e) {}
+• Accessing and Modifying DOM Element Properties:
+The selected DOM elements' properties are accessed and modified. For example, when the 
+form is submitted, we get the values of the name and email inputs and set the text content of 
+the greeting <div>:
+const name = nameInput.value;
+const email = emailInput.value;
+greetingDiv.textContent = `Hello, ${name}! Your email address is ${email}.`;
+• Preventing Default Behavior:
+Another common use of DOM manipulation is to prevent the default behavior of certain 
+elements, as done in this line to prevent the form from submitting and reloading the page:
+e.preventDefault();  -->
