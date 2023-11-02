@@ -1,0 +1,11 @@
+/* About.css */
+.about-header {
+  background-color: #ffcc00; /* Yellow background */
+  padding: 20px;
+  text-align: center;
+}
+
+.about-content {
+  font-size: 18px;
+  margin: 20px;
+}

@@ -1,0 +1,11 @@
+/* Services.css */
+.services-header {
+  background-color: #3399ff; /* Blue background */
+  padding: 20px;
+  text-align: center;
+}
+
+.services-content {
+  font-size: 18px;
+  margin: 20px;
+}

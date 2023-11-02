@@ -1,0 +1,11 @@
+/* Home.css */
+.home-header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.home-content {
+  font-size: 18px;
+  margin: 20px;
+}

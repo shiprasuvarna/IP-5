@@ -1,0 +1,11 @@
+/* Contact.css */
+.contact-header {
+  background-color: #ff6666; /* Red background */
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-content {
+  font-size: 18px;
+  margin: 20px;
+}
