@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="CSSmanipulationcss.css">
+  <script src="CSSmanipulationjs.js" defer></script>
+</head>
+<body>
+  <button id="my-button" class="my-button">Click me</button>
+  <p class="my-paragraph">This is a paragraph.</p>
+</body>
+</html>
+
+
+
+
+
+<!-- CSS DOM Manipulation:
+• DOM Access:
+The JavaScript code uses DOM manipulation to access HTML elements. It gets references to 
+the button and paragraphs by their IDs and class name:
+const button = document.getElementById('my-button'); 
+const paragraphs = document.getElementsByClassName('my-paragraph'); 
+• Style Modification:
+Inside the click event listener for the button, JavaScript code modifies the styles of these 
+elements. It changes the button's background color to red and changes the text color of all 
+paragraphs with the class "my-paragraph" to blue:
+button.addEventListener('click', function () {
+button.style.backgroundColor = 'red';
+for (let i = 0; i < paragraphs.length; i++) {
+paragraphs[i].style.color = 'blue';
+} -->
